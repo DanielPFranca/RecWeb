@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     components: {
       include: ['Button', 'Avatar', 'FloatLabel', 'InputText', 'TabMenu', 
       'InputText', 'FloatLabel', 'Menubar', 'DataTable', 'Checkbox', 'Toast', 
-      'ProgressSpinner', 'Message', 'OverlayPanel', 'Accordion', 'Panel']
+      'ProgressSpinner', 'Message', 'OverlayPanel', 'Accordion', 'Panel', 'Calendar']
       
     }
   },

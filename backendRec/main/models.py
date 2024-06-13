@@ -59,6 +59,7 @@ class Invoice(models.Model):
     def __str__(self):
         return self.code
 
+
 class InvoiceItem(models.Model):
     productFK = models.ForeignKey(Product, related_name='invoiceItemProduct', on_delete=models.CASCADE)
     invoiceFK = models.ForeignKey(Invoice, related_name='invoiceItemInvoice', on_delete=models.CASCADE)

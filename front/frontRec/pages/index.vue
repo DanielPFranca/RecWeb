@@ -5,7 +5,7 @@ const mensagemErro = ref('');
 
 definePageMeta({
     layout: 'login',
-    //middleware: 'auth'
+    middleware: 'auth'
 })
 
 const { signIn } = useAuth();
@@ -32,6 +32,8 @@ const fazerLogin = () => {
             }, 3000);
         })
 }
+
+
 
 </script>
 
