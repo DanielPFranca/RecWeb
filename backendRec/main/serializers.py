@@ -65,7 +65,7 @@ class WarrantyReadSerializer(serializers.ModelSerializer):
         fields = '__all__'
         many = True
 
-class WarrantyWriteSerializer(serializers.ModelSerializer):    
+class WarrantyWriteSerializer(serializers.ModelSerializer):  
     class Meta:
         model = Warranty
         fields = '__all__'

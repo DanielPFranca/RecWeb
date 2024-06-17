@@ -1,5 +1,16 @@
-import type { Product } from "./products";
 
+
+
+// export class Invoice {
+//     id: number = 0;
+//     code: number = 0;
+//     customerName: string = '';
+//     customerCNPJ: number = 0;
+//     sellerName: string = '';
+//     totalValue: number = 0;
+//     emissionDate?: string = '';
+//     uploadDate?: string = '';
+// }
 
 export type Invoice = {
     id: number;
@@ -13,9 +24,3 @@ export type Invoice = {
 }
 
 
-export type InvoiceItem = {
-    productFK: Product;
-    invoiceFK: Invoice;
-    price: number;
-    quantity: number;
-}

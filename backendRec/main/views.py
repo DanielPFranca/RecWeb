@@ -52,16 +52,6 @@ class ProductView(ReadWriteSerializerMixin, ModelViewSet):
 
 
 
-
-# class InvoiceFilter(django_filters.FilterSet):
-#     code = django_filters.CharFilter(field_name='code', lookup_expr='icontains')
-#     emissionDate = django_filters.DateFilter(field_name='emissionDate', lookup_expr='gte')
-
-#     class Meta:
-#         model = Invoice
-#         fields = ['code', 'emissionDate']
-
-
 class InvoiceView(ModelViewSet):
     queryset = Invoice.objects.all()
     serializer_class = InvoiceSerializer
@@ -70,8 +60,9 @@ class InvoiceView(ModelViewSet):
     ordering_fields = '__all__'
 
     def get_queryset(self):
-        user = self.request.user
-        return Invoice.objects.filter(customerCNPJ=user.registrationNumber)
+        user_cnpj = self.request.user
+        return Invoice.objects.filter(customerCNPJ=user_cnpj.registrationNumber)
+
 
 
 class InvoiceItemView(ReadWriteSerializerMixin, ModelViewSet):
