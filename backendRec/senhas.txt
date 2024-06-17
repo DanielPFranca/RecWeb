@@ -1,3 +1,6 @@
+
+Link Deploy Vercel: https://rec-roject.vercel.app/
+
 admin@admin.com
 admin
 
